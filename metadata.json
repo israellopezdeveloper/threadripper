@@ -1,0 +1,17 @@
+{
+  "technologies": ["streamlit", " python"],
+  "lang": {
+    "en": {
+      "name": "ThreadRipper",
+      "desc": "real-time log monitoring to enhance traceability and analysis in concurrent execution environments."
+    },
+    "es": {
+      "name": "ThreadRipper",
+      "desc": "monitoreo de logs en tiempo real para mejorar la trazabilidad y el análisis en entornos de ejecución concurrentes."
+    },
+    "zh": {
+      "name": "ThreadRipper",
+      "desc": "实时日志监控，提升并发执行环境中的可追溯性和分析能力。"
+    }
+  }
+}
