@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Threadripper
+Comment=Real-Time Log Monitoring Application
+Exec=/usr/local/bin/threadripper
+Icon=utilities-terminal
+Terminal=false
+Type=Application
+Categories=Utility;Development;
+

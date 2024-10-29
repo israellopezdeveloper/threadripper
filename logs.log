@@ -1,0 +1,35 @@
+< 📘 > th_id=712 time=1182699566 |> file=low_saurion.c             line=735  deep=17 function=saurion_create                 function_id=0x40ad0f       parents=<0x430533> |> position=init     |>
+< 📘 > th_id=712 time=1182699673 |> file=low_saurion.c             line=848  deep=17 function=saurion_create                 function_id=0x40ad0f       parents=<0x43079d> |> position=end      |>
+< 📘 > th_id=832 time=1182699745 |> file=low_saurion.c             line=855  deep=5  function=saurion_worker_master          function_id=0x432cc8       parents=<0x430533> |> position=init     |>
+< 📘 > th_id=592 time=1182699816 |> file=low_saurion.c             line=1005 deep=5  function=saurion_worker_slave           function_id=0x432cc8       parents=<0x430533> |> position=init     |>
+< 📘 > th_id=592 time=1182699864 |> file=low_saurion.c             line=939  deep=6  function=saurion_worker_slave_loop_it   function_id=0x43237f       parents=<0x430533> |> position=init     |>
+< 💣 > th_id=592 time=1182699869 |> file=low_saurion.c             line=942  deep=6  function=saurion_worker_slave_loop_it   function_id=0x43237f       parents=<0x42fdf5> |> position=punctual |> Critical error
+< 📘 > th_id=352 time=1182700009 |> file=low_saurion.c             line=1005 deep=5  function=saurion_worker_slave           function_id=0x432cc8       parents=<0x430533> |> position=init     |>
+< 📘 > th_id=352 time=1182700049 |> file=low_saurion.c             line=939  deep=6  function=saurion_worker_slave_loop_it   function_id=0x43237f       parents=<0x430533> |> position=init     |>
+< 💣 > th_id=352 time=1182700054 |> file=low_saurion.c             line=942  deep=6  function=saurion_worker_slave_loop_it   function_id=0x43237f       parents=<0x42fdf5> |> position=punctual |> Critical error
+< ⏰ > th_id=592 time=1182702952 |> file=low_saurion.c             line=972  deep=6  function=saurion_worker_slave_loop_it   function_id=0x43237f       parents=<0x43005f> |> position=punctual |> Error
+< ❗ > th_id=592 time=1182702990 |> file=low_saurion.c             line=997  deep=6  function=saurion_worker_slave_loop_it   function_id=0x43237f       parents=<0x4302c9> |> position=punctual |> Warning
+< 📘 > th_id=592 time=1182702995 |> file=low_saurion.c             line=998  deep=6  function=saurion_worker_slave_loop_it   function_id=0x43237f       parents=<0x43079d> |> position=end      |>
+< 📘 > th_id=592 time=1182702998 |> file=low_saurion.c             line=939  deep=6  function=saurion_worker_slave_loop_it   function_id=0x43237f       parents=<0x430533> |> position=init     |>
+< 💣 > th_id=592 time=1182703007 |> file=low_saurion.c             line=942  deep=6  function=saurion_worker_slave_loop_it   function_id=0x43237f       parents=<0x42fdf5> |> position=punctual |> Critical error
+< ⏰ > th_id=592 time=1182703125 |> file=low_saurion.c             line=972  deep=6  function=saurion_worker_slave_loop_it   function_id=0x43237f       parents=<0x43005f> |> position=punctual |> Error
+< ❗ > th_id=592 time=1182703146 |> file=low_saurion.c             line=997  deep=6  function=saurion_worker_slave_loop_it   function_id=0x43237f       parents=<0x4302c9> |> position=punctual |> Warning
+< 📘 > th_id=592 time=1182703150 |> file=low_saurion.c             line=998  deep=6  function=saurion_worker_slave_loop_it   function_id=0x43237f       parents=<0x43079d> |> position=end      |>
+< 📘 > th_id=592 time=1182703154 |> file=low_saurion.c             line=939  deep=6  function=saurion_worker_slave_loop_it   function_id=0x43237f       parents=<0x430533> |> position=init     |>
+< 💣 > th_id=592 time=1182703157 |> file=low_saurion.c             line=942  deep=6  function=saurion_worker_slave_loop_it   function_id=0x43237f       parents=<0x42fdf5> |> position=punctual |> Critical error
+< ⏰ > th_id=352 time=1182703390 |> file=low_saurion.c             line=972  deep=6  function=saurion_worker_slave_loop_it   function_id=0x43237f       parents=<0x43005f> |> position=punctual |> Error
+< ❗ > th_id=352 time=1182703420 |> file=low_saurion.c             line=997  deep=6  function=saurion_worker_slave_loop_it   function_id=0x43237f       parents=<0x4302c9> |> position=punctual |> Warning
+< 📘 > th_id=352 time=1182703425 |> file=low_saurion.c             line=998  deep=6  function=saurion_worker_slave_loop_it   function_id=0x43237f       parents=<0x43079d> |> position=end      |>
+< 📘 > th_id=352 time=1182703428 |> file=low_saurion.c             line=939  deep=6  function=saurion_worker_slave_loop_it   function_id=0x43237f       parents=<0x430533> |> position=init     |>
+< 💣 > th_id=352 time=1182703430 |> file=low_saurion.c             line=942  deep=6  function=saurion_worker_slave_loop_it   function_id=0x43237f       parents=<0x42fdf5> |> position=punctual |> Critical error
+< ⏰ > th_id=352 time=1182703593 |> file=low_saurion.c             line=972  deep=6  function=saurion_worker_slave_loop_it   function_id=0x43237f       parents=<0x43005f> |> position=punctual |> Error
+< 📘 > th_id=832 time=1182703611 |> file=low_saurion.c             line=931  deep=5  function=saurion_worker_master          function_id=0x432cc8       parents=<0x43079d> |> position=end      |>
+< ❗ > th_id=352 time=1182703619 |> file=low_saurion.c             line=997  deep=6  function=saurion_worker_slave_loop_it   function_id=0x43237f       parents=<0x4302c9> |> position=punctual |> Warning
+< 📘 > th_id=592 time=1182703621 |> file=low_saurion.c             line=969  deep=6  function=saurion_worker_slave_loop_it   function_id=0x43237f       parents=<0x43079d> |> position=end      |>
+< 📘 > th_id=592 time=1182703629 |> file=low_saurion.c             line=1034 deep=5  function=saurion_worker_slave           function_id=0x432cc8       parents=<0x43079d> |> position=end      |>
+< 📘 > th_id=352 time=1182703624 |> file=low_saurion.c             line=998  deep=6  function=saurion_worker_slave_loop_it   function_id=0x43237f       parents=<0x43079d> |> position=end      |>
+< 📘 > th_id=352 time=1182703638 |> file=low_saurion.c             line=939  deep=6  function=saurion_worker_slave_loop_it   function_id=0x43237f       parents=<0x430533> |> position=init     |>
+< 💣 > th_id=352 time=1182703643 |> file=low_saurion.c             line=942  deep=6  function=saurion_worker_slave_loop_it   function_id=0x43237f       parents=<0x42fdf5> |> position=punctual |> Critical error
+< 📘 > th_id=352 time=1182703655 |> file=low_saurion.c             line=969  deep=6  function=saurion_worker_slave_loop_it   function_id=0x43237f       parents=<0x43079d> |> position=end      |>
+< 📘 > th_id=352 time=1182703659 |> file=low_saurion.c             line=1034 deep=5  function=saurion_worker_slave           function_id=0x432cc8       parents=<0x43079d> |> position=end      |>
+
