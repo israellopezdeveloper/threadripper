@@ -5,10 +5,17 @@ import re
 import time
 import streamlit as st
 import argparse
+# Asegúrate de tener instalada esta biblioteca para cargar la imagen
+from PIL import Image
 
 # Configuración de la página de Streamlit en ancho completo
-st.set_page_config(layout="wide")
+st.set_page_config(layout="wide", page_title="Threadripper",
+                   page_icon="/opt/threadripper/logo.png")
 
+# Cargar el logo desde /opt/threadripper/logo.png y mostrarlo en la aplicación
+logo_path = "/opt/threadripper/logo.png"
+logo = Image.open(logo_path)
+st.image(logo, width=150)
 # Argumentos de línea de comandos
 parser = argparse.ArgumentParser(description="Monitor real-time log updates.")
 parser.add_argument("log_file", type=str,
@@ -149,7 +156,8 @@ while True:
                     hovertemplate=(
                         "<b>TH:</b> " + str(row['th']) + "<br>" +
                         "<b>Function:</b> " + row['function'] + "<br>" +
-                        "<b>File:</b> " + row['file'] + " (" + str(row['line']) + ")<br>" +
+                        "<b>File:</b> " + row['file'] + " (" + str(row['line'])
+                        + ")<br>" +
                         "<b>Msg:</b> " + row['msg'] + "<br>")
                 )
             )
@@ -158,6 +166,6 @@ while True:
         plot_container.plotly_chart(
             fig, use_container_width=True, key=time.time())
 
-    # Actualizar el DataFrame anterior y hacer una pausa antes de la siguiente actualización
+    # Update
     df_previous = df
     time.sleep(5)  # Actualizar cada 5 segundos
