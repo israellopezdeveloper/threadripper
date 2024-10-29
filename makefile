@@ -8,6 +8,8 @@ DESKTOP_FILE := /usr/share/applications/threadripper.desktop
 install: check-dependencies
 	@mkdir -p $(INSTALL_DIR)
 	@cp threadripper.py $(INSTALL_DIR)/
+	@cp logo.png $(INSTALL_DIR)/
+	@chmod 644 $(INSTALL_DIR)/logo.png
 	@cp scripts/threadripper.sh $(BIN_DIR)/threadripper
 	@chmod +x $(BIN_DIR)/threadripper
 	@cp threadripper.desktop $(DESKTOP_FILE)
