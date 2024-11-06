@@ -64,34 +64,35 @@ def load_logs(log_file):
     df = pd.DataFrame(parsed_logs)
     df['time'] = pd.to_numeric(df['time'], errors='coerce')
     df['line'] = pd.to_numeric(df['line'], errors='coerce')
-    df['deep'] = pd.to_numeric(df['deep'], errors='coerce')
+    df['depth'] = pd.to_numeric(df['depth'], errors='coerce')
     df = df.drop(columns=['parents', 'function_id'], errors='ignore')
     df = df.sort_values(by=['th_id', 'time']).reset_index(drop=True)
     df['event_id'] = df.groupby(
-        ['th_id', 'function', 'deep', 'position']).cumcount()
+        ['th_id', 'function', 'depth', 'position']).cumcount()
+    print(df)
     df_init = df[df['position'] == 'init']
     df_end = df[df['position'] == 'end']
     df_merged = pd.merge(df_init, df_end,
-                         on=['th_id', 'function', 'deep', 'event_id'],
+                         on=['th_id', 'function', 'depth', 'event_id'],
                          how='left', suffixes=('_begin', '_end'))
     df_merged['begin'] = df_merged['time_begin']
     df_merged['end'] = df_merged['time_end']
     df_result = df_merged[['marker_begin', 'th_id', 'time_begin', 'time_end',
-                           'file_begin', 'line_begin', 'deep', 'function',
-                           'position_begin', 'message_begin', 'begin', 'end']]
+                           'file_begin', 'line_begin', 'depth', 'function',
+                           'position_begin', 'begin', 'end']]
     df_result = df_result.rename(columns={
         "marker_begin": "marker", "th_id": "th", "file_begin": "file",
-        "line_begin": "line", "message_begin": "msg"
+        "line_begin": "line"
     })
     df_result = df_result.drop(
         columns=["time_begin", "time_end", "position_begin"])
 
     df_punctual = df[df['position'] == 'punctual'].reset_index(drop=True)
     df_punctual = df_punctual.rename(
-        columns={"th_id": "th", "time": "begin", "message": "msg"})
+        columns={"th_id": "th", "time": "begin"})
     df_punctual = df_punctual.drop(columns=["position", "event_id"])
     new_order = ['marker', 'th', 'file', 'line',
-                 'deep', 'function', 'msg', 'begin']
+                 'depth', 'function', 'begin']
     df_punctual = df_punctual.reindex(columns=new_order)
     df_punctual['end'] = df_punctual['begin']
 
@@ -128,8 +129,7 @@ while True:
                               'function': True,
                               'file': True,
                               'line': True,
-                              'deep': False,
-                              'msg': False,
+                              'depth': False,
                               'begin': False,
                               'end': False
         })
@@ -157,8 +157,7 @@ while True:
                         "<b>TH:</b> " + str(row['th']) + "<br>" +
                         "<b>Function:</b> " + row['function'] + "<br>" +
                         "<b>File:</b> " + row['file'] + " (" + str(row['line'])
-                        + ")<br>" +
-                        "<b>Msg:</b> " + row['msg'] + "<br>")
+                        + ")<br>")
                 )
             )
 

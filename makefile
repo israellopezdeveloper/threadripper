@@ -27,7 +27,7 @@ clean:
 	@rm -rf __pycache__  *.pyc *.pyo
 
 check-dependencies:
-	@$(PIP) install -r requirements.txt > /dev/null
+	@$(PIP) install -r requirements.txt > /dev/null 2>&1 || true
 
 run: check-dependencies
 	@streamlit run threadripper.py
